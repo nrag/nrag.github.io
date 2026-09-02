@@ -1,0 +1,30 @@
+---
+layout: default
+---
+  <div class="twelve columns">
+    <div class="four columns">
+      <img src='{{ page.author_image }}' float ="center" height="auto" width="auto"/>
+    </div>
+    <div class="eight columns">
+      {{ content }}
+    </div>
+  </div>
+  {%- if page.products -%}
+    {% for item in page.products %}
+    <div class="twelve columns">
+      <div class="four columns">
+        {%- if item.product.carousel -%}
+          {% include carousel.html height="200" width="100" unit="%" duration="7" number=item.product.carousel %}
+        {%- elsif item.product.icon -%}
+          <img src='{{ item.product.icon }}' height="auto" width="auto"/>
+        {% endif %}
+      </div>
+      <div class="eight columns about-product">
+        <h3 >{{ item.product.name }}</h3>
+        {%- if item.product.description -%}
+        <p> {{item.product.description}}</p>
+        {%- endif -%}
+      </div>
+    </div>
+    {%- endfor -%}
+  {%- endif -%}

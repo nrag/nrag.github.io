@@ -1,0 +1,14 @@
+{
+    "name": "nanda-blog",
+    "version": "0.0.1",
+    "description": "Nanda's personal blog",
+    "authors": [{
+        "name": "Nanda R",
+        "email": "nanda@thenandlabs.com"
+        }
+    ],
+    "license": "",
+    "dependencies": {
+        "skeleton-sass-official": "latest"
+    }
+}
