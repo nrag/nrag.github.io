@@ -1,0 +1,31 @@
+---
+import type { WritingEntry } from '../lib/writing';
+import { entryHref, formatHref } from '../lib/writing';
+
+interface Props {
+  entry: WritingEntry;
+  prominent?: boolean;
+}
+
+const { entry, prominent = false } = Astro.props;
+const href = entryHref(entry);
+const external = Boolean(entry.data.externalUrl);
+---
+
+<article class:list={['writing-card', { prominent }]}>
+  <div class="entry-meta">
+    <a href={formatHref(entry.data.kind)}>{entry.data.kind}</a>
+    <time datetime={entry.data.publishedAt.toISOString()}>
+      {entry.data.publishedAt.toLocaleDateString('en-US', { day: '2-digit', month: 'short', timeZone: 'UTC' })}
+    </time>
+    <span>{entry.data.minutes} min</span>
+  </div>
+  <div class="entry-copy">
+    <h2><a href={href} target={external ? '_blank' : undefined} rel={external ? 'noopener noreferrer' : undefined}>{entry.data.title}</a></h2>
+    <p>{entry.data.description}</p>
+    <span class="entry-topics">{entry.data.topics.join(' / ')}</span>
+  </div>
+  <a class="entry-arrow" href={href} target={external ? '_blank' : undefined} rel={external ? 'noopener noreferrer' : undefined} aria-label={`${external ? 'Open' : 'Read'} ${entry.data.title}`}>
+    <span aria-hidden="true">{external ? '↗' : '→'}</span>
+  </a>
+</article>

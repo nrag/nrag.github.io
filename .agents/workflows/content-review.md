@@ -54,8 +54,11 @@ Search the candidate and generated output for secrets, tokens, private URLs,
 email threads, unpublished employer material, personal phone numbers, addresses,
 and accidental document metadata.
 
-Confirm that Microsoft and other employer experience is framed as public career
-history and does not imply employer endorsement of NandLabs or its opinions.
+Do not name Nanda's current or former employers, job title, or employer-specific
+projects on the public site. The only career summary should state that Nanda has
+worked in the tech industry for over two decades and link to LinkedIn for current
+role and employment history. Nothing should imply employer endorsement of
+NandLabs or its opinions.
 
 ### 5. Check Navigation And Discoverability
 
@@ -84,4 +87,3 @@ on both narrow and wide layouts.
 Pass only when every changed public page has been rendered and reviewed, every
 material claim is sourced or user-approved, attribution is intact, and no
 privacy or confidentiality blocker remains.
-

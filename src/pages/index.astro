@@ -1,0 +1,56 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import WritingCard from '../components/WritingCard.astro';
+import { byNewest, formatHref, isPublished } from '../lib/writing';
+
+const writing = (await getCollection('writing')).filter(isPublished).sort(byNewest);
+const counts = writing.reduce<Record<string, number>>((result, entry) => {
+  result[entry.data.kind] = (result[entry.data.kind] ?? 0) + 1;
+  return result;
+}, {});
+const explicitlyUpdated = [...writing]
+  .filter((entry) => entry.data.updatedAt)
+  .sort((a, b) => b.data.updatedAt!.valueOf() - a.data.updatedAt!.valueOf())[0];
+const sidebarEntry = explicitlyUpdated ?? writing[0];
+const dateLabel = writing[0]?.data.publishedAt.toLocaleDateString('en-US', { month: 'long', year: 'numeric', timeZone: 'UTC' });
+const formats = ['essay', 'note', 'link', 'idea'] as const;
+---
+
+<BaseLayout>
+  <div class="publication-index shell">
+    <section class="index-main" aria-labelledby="latest-writing">
+      <header class="index-heading">
+        <h1 id="latest-writing">Latest writing</h1>
+        {dateLabel && <span>{dateLabel}</span>}
+      </header>
+      <div class="writing-list">
+        {writing.map((entry, index) => <WritingCard entry={entry} prominent={index === 0} />)}
+      </div>
+    </section>
+
+    <aside class="index-sidebar" aria-label="Publication index">
+      <section>
+        <h2>Browse by format</h2>
+        <dl>
+          {formats.map((format) => (
+            <div><dt><a href={formatHref(format)}>{format === 'essay' ? 'Essays' : `${format[0].toUpperCase()}${format.slice(1)}s`}</a></dt><dd>{counts[format] ?? 0}</dd></div>
+          ))}
+        </dl>
+      </section>
+      {sidebarEntry && (
+        <section>
+          <h2>{explicitlyUpdated ? 'Recently updated' : 'Most recent'}</h2>
+          <a class="sidebar-title" href={`/writing/${sidebarEntry.id}`}>{sidebarEntry.data.title}</a>
+          <time datetime={(sidebarEntry.data.updatedAt ?? sidebarEntry.data.publishedAt).toISOString()}>{(sidebarEntry.data.updatedAt ?? sidebarEntry.data.publishedAt).toLocaleDateString('en-US', { day: '2-digit', month: 'short', year: 'numeric', timeZone: 'UTC' })}</time>
+        </section>
+      )}
+      <section class="sidebar-subscribe">
+        <h2>Follow the publication</h2>
+        <p>Email for new writing, or use RSS.</p>
+        <a href="/subscribe">Subscribe <span aria-hidden="true">→</span></a>
+        <a href="/rss.xml">RSS <span aria-hidden="true">↗</span></a>
+      </section>
+    </aside>
+  </div>
+</BaseLayout>

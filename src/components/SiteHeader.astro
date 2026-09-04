@@ -1,0 +1,32 @@
+---
+const pathname = Astro.url.pathname;
+const formats = [
+  { href: '/essays', label: 'Essays' },
+  { href: '/notes', label: 'Notes' },
+  { href: '/links', label: 'Links' },
+  { href: '/ideas', label: 'Ideas' },
+];
+---
+
+<header class="site-header">
+  <div class="shell topbar">
+    <a class="wordmark" href="/" aria-label="NandLabs and Nanda Raghunathan home">NandLabs <span>/ Nanda Raghunathan</span></a>
+    <nav class="format-nav" aria-label="Writing formats">
+      <ul>
+        {formats.map((format) => (
+          <li><a href={format.href} aria-current={pathname === format.href ? 'page' : undefined}>{format.label}</a></li>
+        ))}
+      </ul>
+    </nav>
+    <a class="subscribe-link" href="/subscribe">Subscribe</a>
+  </div>
+  <div class="identity-strip">
+    <div class="shell identity-inner">
+      <nav aria-label="About and projects">
+        <a href="/work">Projects</a>
+        <a href="/about">About</a>
+        <a href="https://www.linkedin.com/in/nandaraghunathan">LinkedIn <span aria-hidden="true">↗</span></a>
+      </nav>
+    </div>
+  </div>
+</header>

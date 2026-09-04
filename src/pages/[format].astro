@@ -1,0 +1,34 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import WritingCard from '../components/WritingCard.astro';
+import { byNewest, isPublished } from '../lib/writing';
+
+export function getStaticPaths() {
+  const formats = {
+    essays: { kind: 'essay', title: 'Essays', description: 'Longer arguments about technical systems, organizations, products, and engineering practice.' },
+    notes: { kind: 'note', title: 'Notes', description: 'Shorter observations, working models, and ideas that are useful before they become essays.' },
+    links: { kind: 'link', title: 'Links', description: 'Things worth reading, with enough context to explain why they are worth your attention.' },
+    ideas: { kind: 'idea', title: 'Ideas', description: 'Business and product hypotheses presented as questions to test, not predictions to defend.' },
+  } as const;
+  return Object.entries(formats).map(([format, data]) => ({ params: { format }, props: data }));
+}
+
+const { kind, title, description } = Astro.props;
+const entries = (await getCollection('writing')).filter((entry) => isPublished(entry) && entry.data.kind === kind).sort(byNewest);
+---
+
+<BaseLayout title={`${title} — NandLabs`} description={description}>
+  <header class="page-header shell">
+    <p class="eyebrow">Writing / {title}</p>
+    <h1>{title}</h1>
+    <p>{description}</p>
+  </header>
+  <section class="section shell" aria-label={title}>
+    {entries.length > 0 ? (
+      <div class="writing-list">{entries.map((entry, index) => <WritingCard entry={entry} prominent={index === 0} />)}</div>
+    ) : (
+      <div class="empty-state"><h2>Nothing published here yet.</h2><p>New {title.toLowerCase()} will appear here as they are published.</p><a href="/writing">Browse all writing</a></div>
+    )}
+  </section>
+</BaseLayout>
