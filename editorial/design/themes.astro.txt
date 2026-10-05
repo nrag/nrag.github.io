@@ -1,0 +1,386 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const themes = [
+  { id: 'option-1', number: '01', name: 'Quiet Technical Journal', note: 'Warm, editorial, restrained' },
+  { id: 'option-2', number: '02', name: 'Modern Research Archive', note: 'Cool, systematic, precise' },
+  { id: 'option-3', number: '03', name: 'Literary Engineering Review', note: 'Writer-first, reflective, substantial' },
+  { id: 'option-4', number: '04', name: 'Scandinavian Product Notebook', note: 'Airy, human, quietly experimental' },
+  { id: 'option-5', number: '05', name: 'Monochrome Executive Minimal', note: 'Direct, senior, uncompromising' },
+  { id: 'option-6', number: '06', name: 'Reader-first Index', note: 'Your preferred hybrid, optimized for returning readers' },
+];
+
+const palettes = [
+  { id: 'palette-cobalt', number: '07', name: 'Cobalt Index', note: 'Crisp, familiar, and closest to Option 6', paper: '#f4f6f8', surface: '#e2e8ef', ink: '#14253a', accent: '#2457a6', line: '#a9b8c7' },
+  { id: 'palette-orange', number: '08', name: 'Graphite / Signal Orange', note: 'Technical with a warmer editorial signal', paper: '#f5f5f2', surface: '#e7e6e1', ink: '#202426', accent: '#b6532e', line: '#a7a7a1' },
+  { id: 'palette-green', number: '09', name: 'Deep Green / Parchment', note: 'Thoughtful, grounded, and slightly literary', paper: '#f4f5ef', surface: '#e1e8dc', ink: '#19332d', accent: '#39705b', line: '#a9b8a9' },
+  { id: 'palette-blue', number: '10', name: 'Ink / Pale Blue', note: 'Restrained, bright, and research-oriented', paper: '#f7f9fb', surface: '#e4ecf3', ink: '#172333', accent: '#356b8c', line: '#a8bac7' },
+  { id: 'palette-burgundy', number: '11', name: 'Charcoal / Burgundy', note: 'Serious, distinctive, and less corporate', paper: '#f5f2ef', surface: '#e9e1de', ink: '#252124', accent: '#873c4a', line: '#b8aaa8' },
+];
+---
+
+<BaseLayout title="Theme directions — NandLabs" description="Visual directions and color palette studies for the NandLabs publication.">
+  <div class="theme-gallery">
+    <header class="gallery-intro">
+      <p>Visual direction study</p>
+      <h1>Same voice. Several different readings.</h1>
+      <span>Compare the overall feeling first, then test the new palettes against the same reader-first index.</span>
+      <nav aria-label="Theme options">
+        {themes.map((theme) => <a href={`#${theme.id}`}>{theme.number}</a>)}
+        {palettes.map((palette) => <a href={`#${palette.id}`}>{palette.number}</a>)}
+      </nav>
+    </header>
+
+    <main class="gallery-list">
+      <section class="theme-option" id="option-1" aria-labelledby="theme-1-title">
+        <header class="option-label">
+          <div><span>Option 01</span><h2 id="theme-1-title">Quiet Technical Journal</h2></div>
+          <p>Warm, editorial, restrained</p>
+        </header>
+        <div class="mockup journal">
+          <header class="mock-nav"><strong>NandLabs</strong><nav><span>Writing</span><span>Projects</span><span>About</span></nav><em>Subscribe</em></header>
+          <div class="journal-hero">
+            <p class="mock-kicker">Nanda Raghunathan · Notes on technology and organizations</p>
+            <h3>Building durable systems.<br />Testing unfinished ideas.</h3>
+            <p class="mock-dek">Essays, technical notes, useful links, and experiments from more than two decades in technology.</p>
+          </div>
+          <div class="journal-list">
+            <span>Latest</span>
+            <article><time>01 Sep 2026</time><h4>What I want NandLabs to be</h4><p>A public notebook for ideas that become clearer through writing and conversation.</p></article>
+            <article><time>28 Aug 2026</time><h4>Architecture is an organizational instrument</h4><p>Technical boundaries shape ownership, decisions, and the speed of learning.</p></article>
+          </div>
+        </div>
+      </section>
+
+      <section class="theme-option" id="option-2" aria-labelledby="theme-2-title">
+        <header class="option-label">
+          <div><span>Option 02</span><h2 id="theme-2-title">Modern Research Archive</h2></div>
+          <p>Cool, systematic, precise</p>
+        </header>
+        <div class="mockup archive">
+          <header class="mock-nav"><strong>NANDLABS / NR</strong><nav><span>INDEX</span><span>PROJECTS</span><span>ABOUT</span></nav><em>RSS ↗</em></header>
+          <div class="archive-layout">
+            <aside><span>FOCUS AREAS</span><p>Systems</p><p>Organizations</p><p>Products</p><p>Experiments</p><small>Archive updated<br />September 2026</small></aside>
+            <div class="archive-main">
+              <p class="mock-kicker">INDEPENDENT PUBLICATION / 001</p>
+              <h3>Ideas should leave artifacts.</h3>
+              <p class="mock-dek">A working archive of technical essays, business hypotheses, and annotated links.</p>
+              <div class="archive-row"><b>ESSAY</b><span>What I want NandLabs to be</span><time>8 min</time></div>
+              <div class="archive-row"><b>NOTE</b><span>Architecture is an organizational instrument</span><time>4 min</time></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="theme-option" id="option-3" aria-labelledby="theme-3-title">
+        <header class="option-label">
+          <div><span>Option 03</span><h2 id="theme-3-title">Literary Engineering Review</h2></div>
+          <p>Writer-first, reflective, substantial</p>
+        </header>
+        <div class="mockup review">
+          <header class="review-mast"><small>ESSAYS · NOTES · LINKS · IDEAS</small><strong>NandLabs</strong><small>BY NANDA RAGHUNATHAN</small></header>
+          <div class="review-hero">
+            <p class="mock-kicker">THE OPENING NOTE</p>
+            <h3>Building is a way of thinking.</h3>
+            <p class="mock-dek">After more than two decades in technology, the most useful questions are the ones that survive the project that produced them.</p>
+            <span>Read the essay →</span>
+          </div>
+          <div class="review-columns">
+            <article><b>I</b><h4>Systems</h4><p>What makes technical complexity understandable enough to operate with confidence?</p></article>
+            <article><b>II</b><h4>Organizations</h4><p>How do ownership and architecture learn to tell the same story?</p></article>
+            <article><b>III</b><h4>Experiments</h4><p>Where can a small product expose a large and comfortable assumption?</p></article>
+          </div>
+        </div>
+      </section>
+
+      <section class="theme-option" id="option-4" aria-labelledby="theme-4-title">
+        <header class="option-label">
+          <div><span>Option 04</span><h2 id="theme-4-title">Scandinavian Product Notebook</h2></div>
+          <p>Airy, human, quietly experimental</p>
+        </header>
+        <div class="mockup nordic">
+          <header class="mock-nav"><strong>nandlabs</strong><nav><span>Writing</span><span>Projects</span><span>About</span></nav><em>Get updates</em></header>
+          <div class="nordic-hero">
+            <div><p class="mock-kicker">HELLO, I’M NANDA.</p><h3>Curious about the machinery behind good work.</h3></div>
+            <p class="mock-dek">I write about technical systems, engineering organizations, useful products, and ideas worth trying.</p>
+          </div>
+          <div class="nordic-cards">
+            <article><small>ESSAY · 8 MIN</small><h4>What I want NandLabs to be</h4><span>Read →</span></article>
+            <article><small>NOTE · 4 MIN</small><h4>Architecture is an organizational instrument</h4><span>Read →</span></article>
+          </div>
+        </div>
+      </section>
+
+      <section class="theme-option" id="option-5" aria-labelledby="theme-5-title">
+        <header class="option-label">
+          <div><span>Option 05</span><h2 id="theme-5-title">Monochrome Executive Minimal</h2></div>
+          <p>Direct, senior, uncompromising</p>
+        </header>
+        <div class="mockup mono">
+          <header class="mock-nav"><strong>NANDA RAGHUNATHAN</strong><nav><span>Writing</span><span>Projects</span><span>About</span></nav><em>LinkedIn ↗</em></header>
+          <div class="mono-hero">
+            <p>NANDLABS / INDEPENDENT PUBLICATION</p>
+            <h3>I build systems.<br />I write to understand them.</h3>
+          </div>
+          <div class="mono-bottom">
+            <p>More than two decades in technology.<br />Current role and history on LinkedIn.</p>
+            <div><article><b>01</b><span>What I want NandLabs to be</span></article><article><b>02</b><span>Architecture is an organizational instrument</span></article></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="theme-option" id="option-6" aria-labelledby="theme-6-title">
+        <header class="option-label">
+          <div><span>Recommended hybrid / Option 06</span><h2 id="theme-6-title">Reader-first Index</h2></div>
+          <p>Your preferred hybrid, optimized for returning readers</p>
+        </header>
+        <div class="mockup reader-index">
+          <header class="reader-topbar">
+            <strong>NANDLABS <i>/ NR</i></strong>
+            <nav aria-label="Content formats"><span>ESSAYS</span><span>NOTES</span><span>LINKS</span><span>IDEAS</span></nav>
+            <em>SUBSCRIBE</em>
+          </header>
+          <div class="reader-identity">
+            <span>NANDA RAGHUNATHAN</span>
+            <p>More than two decades in technology.</p>
+            <a>Latest role on LinkedIn ↗</a>
+          </div>
+          <div class="reader-layout">
+            <main>
+              <div class="reader-heading"><h3>Latest writing</h3><span>SEPTEMBER 2026</span></div>
+              <article class="reader-post featured-post">
+                <div class="reader-meta"><b>ESSAY</b><time>01 SEP</time><span>8 MIN</span></div>
+                <div><h4>What I want NandLabs to be</h4><p>A public notebook for ideas that become clearer through writing, testing, and conversation. The goal is not a larger archive, but better exchanges with people working on difficult problems.</p><small>CRAFT / EXPERIMENTS / LEARNING</small></div>
+                <i>→</i>
+              </article>
+              <article class="reader-post">
+                <div class="reader-meta"><b>NOTE</b><time>28 AUG</time><span>4 MIN</span></div>
+                <div><h4>Architecture is an organizational instrument</h4><p>Technical boundaries do more than organize code. They shape ownership, decisions, coordination, and the speed at which a team can learn.</p><small>ARCHITECTURE / ORGANIZATIONS</small></div>
+                <i>→</i>
+              </article>
+              <article class="reader-post">
+                <div class="reader-meta"><b>LINK</b><time>20 AUG</time><span>2 MIN</span></div>
+                <div><h4>Publishing as a durable system</h4><p>A useful example of how small tools, plain files, and frequent notes can compound into a remarkable body of work.</p><small>PUBLISHING / TOOLS</small></div>
+                <i>↗</i>
+              </article>
+            </main>
+            <aside>
+              <section><span>BROWSE BY FORMAT</span><div><b>Essays</b><i>12</i></div><div><b>Notes</b><i>27</i></div><div><b>Links</b><i>43</i></div><div><b>Ideas</b><i>9</i></div></section>
+              <section><span>RECENTLY UPDATED</span><p>Architecture is an organizational instrument</p><small>28 AUG 2026</small></section>
+              <section class="reader-subscribe"><span>FOLLOW THE PUBLICATION</span><p>Email for new writing, or use RSS.</p><b>SUBSCRIBE →</b></section>
+            </aside>
+          </div>
+        </div>
+      </section>
+
+      <section class="theme-option palette-studies" id="palette-studies" aria-labelledby="palette-studies-title">
+        <header class="option-label">
+          <div><span>Palette studies / Options 07–11</span><h2 id="palette-studies-title">Reader-first, five ways</h2></div>
+          <p>Same structure, different atmosphere</p>
+        </header>
+        <div class="palette-grid">
+          {palettes.map((palette) => (
+            <article class="palette-card" id={palette.id} style={`--palette-paper:${palette.paper};--palette-surface:${palette.surface};--palette-ink:${palette.ink};--palette-accent:${palette.accent};--palette-line:${palette.line};`}>
+              <header>
+                <span>Option {palette.number}</span>
+                <h3>{palette.name}</h3>
+                <p>{palette.note}</p>
+              </header>
+              <div class="palette-preview" aria-label={`${palette.name} preview`}>
+                <div class="palette-nav"><b>NANDLABS / NANDA RAGHUNATHAN</b><i>SUBSCRIBE</i></div>
+                <div class="palette-body">
+                  <small>LATEST WRITING</small>
+                  <h4>Ideas with somewhere to go.</h4>
+                  <div class="palette-row"><b>ESSAY</b><span>What I want NandLabs to be</span><i>→</i></div>
+                  <div class="palette-row"><b>NOTE</b><span>Architecture is an organizational instrument</span><i>→</i></div>
+                </div>
+              </div>
+              <div class="palette-swatches" aria-label="Palette colors">
+                <i style={`background:${palette.paper}`} aria-label={`Paper ${palette.paper}`}></i>
+                <i style={`background:${palette.surface}`} aria-label={`Surface ${palette.surface}`}></i>
+                <i style={`background:${palette.ink}`} aria-label={`Ink ${palette.ink}`}></i>
+                <i style={`background:${palette.accent}`} aria-label={`Accent ${palette.accent}`}></i>
+                <i style={`background:${palette.line}`} aria-label={`Line ${palette.line}`}></i>
+              </div>
+            </article>
+          ))}
+        </div>
+      </section>
+    </main>
+  </div>
+</BaseLayout>
+
+<style>
+  .theme-gallery { background: #ecece8; color: #171917; padding-bottom: 8rem; }
+  .gallery-intro { max-width: 1120px; margin: 0 auto; padding: 6rem 2rem 4rem; }
+  .gallery-intro > p, .option-label span { font: 700 .68rem/1.2 ui-monospace, monospace; letter-spacing: .14em; text-transform: uppercase; }
+  .gallery-intro h1 { max-width: 850px; margin: .5rem 0 1.5rem; font: 500 clamp(3rem, 7vw, 6.5rem)/.95 Georgia, serif; letter-spacing: -.055em; }
+  .gallery-intro > span { display: block; max-width: 620px; color: #555b55; font-size: 1.05rem; }
+  .gallery-intro nav { display: flex; gap: .6rem; margin-top: 2rem; }
+  .gallery-intro nav a { display: grid; width: 2.4rem; height: 2.4rem; place-items: center; border: 1px solid #171917; background: transparent; font: 700 .7rem ui-monospace, monospace; text-decoration: none; }
+  .gallery-intro nav a:hover { background: #171917; color: white; }
+  .gallery-list { max-width: 1280px; margin: 0 auto; padding: 0 2rem; }
+  .theme-option { scroll-margin-top: 1rem; margin-top: 7rem; }
+  .option-label { display: flex; align-items: end; justify-content: space-between; gap: 2rem; max-width: 1120px; margin: 0 auto 1.25rem; }
+  .option-label h2 { margin: .35rem 0 0; font: 600 clamp(1.5rem, 3vw, 2.4rem)/1.1 ui-sans-serif, sans-serif; letter-spacing: -.03em; }
+  .option-label p { margin: 0; color: #656a65; }
+  .mockup { max-width: 1120px; min-height: 650px; margin: 0 auto; overflow: hidden; box-shadow: 0 18px 60px rgba(24, 28, 25, .13); }
+  .mockup * { box-sizing: border-box; }
+  .mock-nav { display: flex; align-items: center; justify-content: space-between; gap: 2rem; padding: 1.25rem 2rem; }
+  .mock-nav nav { display: flex; gap: 2rem; }
+  .mock-nav em { font-style: normal; }
+  .mock-kicker { font-size: .67rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; }
+  .mock-dek { max-width: 640px; }
+
+  .journal { padding: 0 3.2rem 3rem; background: #f7f4ec; color: #202522; font-family: "Avenir Next", sans-serif; }
+  .journal .mock-nav { border-bottom: 1px solid #b9bbb4; padding-inline: 0; font-size: .78rem; }
+  .journal .mock-nav strong { font: 600 1.25rem Georgia, serif; }
+  .journal .mock-nav em { color: #315d70; }
+  .journal-hero { padding: 6rem 0 5rem; border-bottom: 1px solid #202522; }
+  .journal-hero .mock-kicker { color: #315d70; }
+  .journal-hero h3 { max-width: 900px; margin: 1.2rem 0 1.8rem; font: 500 clamp(3rem, 6vw, 5.7rem)/.98 Georgia, serif; letter-spacing: -.05em; }
+  .journal-hero .mock-dek { color: #59625d; font: 1.2rem/1.55 Georgia, serif; }
+  .journal-list { display: grid; grid-template-columns: 110px 1fr 1fr; gap: 2rem; padding-top: 2rem; }
+  .journal-list > span, .journal-list time { font: .65rem ui-monospace, monospace; text-transform: uppercase; }
+  .journal-list article { border-top: 1px solid #b9bbb4; padding-top: 1rem; }
+  .journal-list h4 { margin: 1.2rem 0 .6rem; font: 500 1.55rem/1.15 Georgia, serif; }
+  .journal-list article p { color: #59625d; font-size: .85rem; line-height: 1.5; }
+
+  .archive { background: #f7f9fa; color: #14263b; font-family: Arial, sans-serif; }
+  .archive .mock-nav { border-bottom: 1px solid #aebdca; font: 700 .66rem ui-monospace, monospace; letter-spacing: .1em; }
+  .archive .mock-nav strong { color: #215b89; }
+  .archive-layout { display: grid; grid-template-columns: 220px 1fr; min-height: 590px; }
+  .archive-layout aside { border-right: 1px solid #aebdca; padding: 3rem 2rem; }
+  .archive-layout aside > span { color: #59738a; font: .63rem ui-monospace, monospace; letter-spacing: .12em; }
+  .archive-layout aside p { margin: 1.2rem 0; font-size: .82rem; font-weight: 700; }
+  .archive-layout aside small { display: block; margin-top: 9rem; color: #6f8190; font: .6rem/1.6 ui-monospace, monospace; }
+  .archive-main { padding: 5rem clamp(2rem, 6vw, 5rem); }
+  .archive-main h3 { max-width: 700px; margin: 1.2rem 0; font: 700 clamp(3rem, 6vw, 6rem)/.93 Arial, sans-serif; letter-spacing: -.065em; }
+  .archive-main .mock-dek { color: #526779; font-size: 1.05rem; }
+  .archive-row { display: grid; grid-template-columns: 80px 1fr auto; gap: 1rem; border-top: 1px solid #aebdca; padding: 1.25rem 0; font-size: .8rem; }
+  .archive-row:first-of-type { margin-top: 4rem; }
+  .archive-row b, .archive-row time { color: #215b89; font: .65rem ui-monospace, monospace; }
+
+  .review { padding: 0 3rem 3rem; background: #f4eedf; color: #2a201c; font-family: Georgia, serif; }
+  .review-mast { display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; border-bottom: 3px double #543b31; padding: 1.3rem 0; }
+  .review-mast strong { font: italic 600 2.3rem Georgia, serif; }
+  .review-mast small { font: .57rem ui-monospace, monospace; letter-spacing: .1em; }
+  .review-mast small:last-child { text-align: right; }
+  .review-hero { max-width: 810px; margin: 0 auto; padding: 6rem 0; text-align: center; }
+  .review-hero .mock-kicker { color: #7a3028; font-family: ui-monospace, monospace; }
+  .review-hero h3 { margin: 1.2rem 0 1.8rem; font: 500 clamp(3.4rem, 7vw, 6.5rem)/.94 Georgia, serif; letter-spacing: -.055em; }
+  .review-hero .mock-dek { margin-inline: auto; font-size: 1.22rem; line-height: 1.55; }
+  .review-hero > span { color: #7a3028; font-size: .8rem; font-weight: 700; }
+  .review-columns { display: grid; grid-template-columns: repeat(3, 1fr); border-top: 1px solid #8c7c70; }
+  .review-columns article { padding: 2rem; }
+  .review-columns article + article { border-left: 1px solid #8c7c70; }
+  .review-columns b { color: #7a3028; font-style: italic; }
+  .review-columns h4 { margin: 2rem 0 .6rem; font-size: 1.45rem; }
+  .review-columns p { font-size: .85rem; line-height: 1.55; }
+
+  .nordic { padding: 0 3rem 3rem; background: #edece6; color: #183b31; font-family: "Avenir Next", sans-serif; }
+  .nordic .mock-nav { padding-inline: 0; font-size: .75rem; }
+  .nordic .mock-nav strong { font-size: 1.25rem; letter-spacing: -.04em; }
+  .nordic .mock-nav em { border: 1px solid #183b31; border-radius: 2rem; padding: .6rem 1rem; }
+  .nordic-hero { display: grid; grid-template-columns: 1.4fr .6fr; align-items: end; gap: 5rem; padding: 6rem 0 5rem; }
+  .nordic-hero .mock-kicker { color: #bb5b3f; }
+  .nordic-hero h3 { max-width: 750px; margin: 1rem 0 0; font: 500 clamp(3rem, 6vw, 5.8rem)/.98 "Avenir Next", sans-serif; letter-spacing: -.06em; }
+  .nordic-hero .mock-dek { color: #52665f; font: 1.05rem/1.65 Georgia, serif; }
+  .nordic-cards { display: grid; grid-template-columns: 1fr 1fr; gap: 1.3rem; }
+  .nordic-cards article { min-height: 210px; border-radius: .6rem; padding: 2rem; background: #f9f7f1; }
+  .nordic-cards article:last-child { background: #dce4d9; }
+  .nordic-cards small { color: #bb5b3f; font-size: .62rem; letter-spacing: .08em; }
+  .nordic-cards h4 { max-width: 400px; margin: 2.2rem 0; font: 500 1.55rem/1.2 Georgia, serif; }
+  .nordic-cards span { font-size: .74rem; font-weight: 700; }
+
+  .mono { background: white; color: #0b0b0b; font-family: Arial, sans-serif; }
+  .mono .mock-nav { border-bottom: 1px solid #0b0b0b; font-size: .7rem; font-weight: 700; }
+  .mono-hero { padding: 5rem 3rem 6rem; }
+  .mono-hero p { font: .65rem ui-monospace, monospace; letter-spacing: .12em; }
+  .mono-hero h3 { max-width: 1020px; margin: 3rem 0 0; font: 800 clamp(3.3rem, 7.5vw, 7.7rem)/.88 Arial, sans-serif; letter-spacing: -.075em; }
+  .mono-bottom { display: grid; grid-template-columns: .7fr 1.3fr; gap: 4rem; padding: 2.5rem 3rem; background: #0b0b0b; color: white; }
+  .mono-bottom > p { color: #bdbdbd; font-size: .82rem; line-height: 1.6; }
+  .mono-bottom article { display: grid; grid-template-columns: 40px 1fr; border-top: 1px solid #555; padding: 1rem 0; font-size: .85rem; }
+  .mono-bottom b { font: .62rem ui-monospace, monospace; }
+
+  .reader-index { background: #f7f9fa; color: #14263b; font-family: Arial, sans-serif; }
+  .reader-topbar { display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; min-height: 64px; border-bottom: 1px solid #9dabb6; padding: 0 2.2rem; font: 700 .66rem ui-monospace, monospace; letter-spacing: .1em; }
+  .reader-topbar strong { color: #174f79; }
+  .reader-topbar strong i { color: #75899a; font-style: normal; }
+  .reader-topbar nav { display: flex; gap: 2.2rem; }
+  .reader-topbar nav span:first-child { border-bottom: 2px solid #174f79; padding-block: 1.35rem; }
+  .reader-topbar em { justify-self: end; border: 1px solid #174f79; padding: .55rem .8rem; color: #174f79; font-style: normal; }
+  .reader-identity { display: flex; align-items: center; gap: 1.5rem; border-bottom: 1px solid #ced6dc; padding: .75rem 2.2rem; color: #607588; font: .62rem ui-monospace, monospace; letter-spacing: .06em; }
+  .reader-identity span { color: #14263b; font-weight: 700; }
+  .reader-identity p { margin: 0; }
+  .reader-identity a { margin-left: auto; color: #174f79; }
+  .reader-layout { display: grid; grid-template-columns: minmax(0, 1fr) 255px; }
+  .reader-layout > main { padding: 3.5rem 3rem 4rem; }
+  .reader-layout > aside { border-left: 1px solid #9dabb6; }
+  .reader-heading { display: flex; align-items: end; justify-content: space-between; margin-bottom: 2rem; }
+  .reader-heading h3 { margin: 0; font: 700 clamp(2.5rem, 5vw, 4.7rem)/.95 Arial, sans-serif; letter-spacing: -.06em; }
+  .reader-heading span { color: #607588; font: .6rem ui-monospace, monospace; letter-spacing: .1em; }
+  .reader-post { display: grid; grid-template-columns: 86px minmax(0, 1fr) 25px; gap: 1.5rem; border-top: 1px solid #9dabb6; padding: 1.8rem 0; }
+  .reader-post.featured-post { border-top: 3px solid #174f79; }
+  .reader-meta { display: flex; flex-direction: column; gap: .5rem; color: #718594; font: .58rem ui-monospace, monospace; letter-spacing: .06em; }
+  .reader-meta b { color: #174f79; }
+  .reader-post h4 { margin: 0 0 .65rem; font: 700 clamp(1.3rem, 2.5vw, 2rem)/1.05 Arial, sans-serif; letter-spacing: -.035em; }
+  .reader-post p { max-width: 680px; margin: 0 0 1rem; color: #506577; font: .86rem/1.55 Georgia, serif; }
+  .reader-post small { color: #718594; font: .54rem ui-monospace, monospace; letter-spacing: .08em; }
+  .reader-post > i { color: #174f79; font-style: normal; }
+  .reader-layout > aside section { border-bottom: 1px solid #9dabb6; padding: 2rem 1.5rem; }
+  .reader-layout > aside section > span { display: block; margin-bottom: 1.3rem; color: #607588; font: .58rem ui-monospace, monospace; letter-spacing: .1em; }
+  .reader-layout > aside section div { display: flex; justify-content: space-between; border-top: 1px solid #d2d9de; padding: .6rem 0; font-size: .72rem; }
+  .reader-layout > aside section div b { font-weight: 600; }
+  .reader-layout > aside section div i { color: #718594; font-style: normal; }
+  .reader-layout > aside section p { margin: 0 0 .6rem; font: .82rem/1.4 Georgia, serif; }
+  .reader-layout > aside section small { color: #718594; font: .56rem ui-monospace, monospace; }
+  .reader-subscribe { background: #e7edf1; }
+  .reader-subscribe b { color: #174f79; font: .62rem ui-monospace, monospace; }
+
+  .palette-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.5rem; max-width: 1120px; margin: 0 auto; }
+  .palette-card { overflow: hidden; border: 1px solid var(--palette-line); background: var(--palette-paper); color: var(--palette-ink); box-shadow: 0 12px 34px rgba(24, 28, 25, .08); }
+  .palette-card > header { padding: 1.5rem 1.5rem 1.25rem; }
+  .palette-card > header > span { color: var(--palette-accent); font: 700 .62rem ui-monospace, monospace; letter-spacing: .12em; text-transform: uppercase; }
+  .palette-card h3 { margin: .55rem 0 .35rem; font: 700 clamp(1.35rem, 2.5vw, 1.9rem)/1.05 ui-sans-serif, sans-serif; letter-spacing: -.04em; }
+  .palette-card > header p { margin: 0; color: color-mix(in srgb, var(--palette-ink) 70%, var(--palette-paper)); font: .88rem/1.4 Georgia, serif; }
+  .palette-preview { margin: 0 1rem 1rem; border: 1px solid var(--palette-line); background: var(--palette-paper); }
+  .palette-nav { display: flex; align-items: center; justify-content: space-between; gap: .75rem; border-bottom: 1px solid var(--palette-line); padding: .8rem .9rem; color: var(--palette-accent); font: 700 .54rem ui-monospace, monospace; letter-spacing: .08em; }
+  .palette-nav i { border: 1px solid var(--palette-accent); padding: .35rem .45rem; font-style: normal; }
+  .palette-body { padding: 1.5rem .9rem .9rem; }
+  .palette-body > small { color: var(--palette-accent); font: 700 .55rem ui-monospace, monospace; letter-spacing: .1em; }
+  .palette-body h4 { margin: .7rem 0 1.25rem; font: 700 clamp(1.45rem, 3vw, 2.2rem)/.98 ui-sans-serif, sans-serif; letter-spacing: -.05em; }
+  .palette-row { display: grid; grid-template-columns: 48px minmax(0, 1fr) 16px; gap: .5rem; border-top: 1px solid var(--palette-line); padding: .75rem 0; font-size: .72rem; }
+  .palette-row b { color: var(--palette-accent); font: 700 .55rem ui-monospace, monospace; }
+  .palette-row i { color: var(--palette-accent); font-style: normal; }
+  .palette-swatches { display: flex; gap: .5rem; border-top: 1px solid var(--palette-line); padding: .85rem 1.5rem 1rem; }
+  .palette-swatches i { display: block; width: 1.3rem; height: 1.3rem; border: 1px solid var(--palette-line); border-radius: 50%; }
+
+  @media (max-width: 760px) {
+    .gallery-intro, .gallery-list { padding-inline: 1rem; }
+    .option-label { align-items: flex-start; flex-direction: column; gap: .4rem; }
+    .mockup { min-height: 0; }
+    .mock-nav nav { display: none; }
+    .journal, .review, .nordic { padding-inline: 1.25rem; }
+    .journal-list, .review-columns, .nordic-hero, .nordic-cards, .mono-bottom { grid-template-columns: 1fr; }
+    .journal-list > span { display: none; }
+    .archive-layout { grid-template-columns: 1fr; }
+    .archive-layout aside { display: none; }
+    .review-mast { grid-template-columns: 1fr auto; }
+    .review-mast small:last-child { display: none; }
+    .review-columns article + article { border-top: 1px solid #8c7c70; border-left: 0; }
+    .nordic-hero { gap: 1rem; }
+    .mono-hero { padding-inline: 1.5rem; }
+    .reader-topbar { grid-template-columns: 1fr auto; padding-inline: 1rem; }
+    .reader-topbar nav { display: none; }
+    .reader-identity { align-items: flex-start; flex-direction: column; gap: .25rem; padding-inline: 1rem; }
+    .reader-identity a { margin-left: 0; }
+    .reader-layout { grid-template-columns: 1fr; }
+    .reader-layout > main { padding: 2.5rem 1rem; }
+    .reader-layout > aside { border-top: 1px solid #9dabb6; border-left: 0; }
+    .reader-post { grid-template-columns: 64px minmax(0, 1fr) 18px; gap: .8rem; }
+    .palette-grid { grid-template-columns: 1fr; }
+    .palette-card > header { padding-inline: 1.25rem; }
+    .palette-swatches { padding-inline: 1.25rem; }
+  }
+</style>

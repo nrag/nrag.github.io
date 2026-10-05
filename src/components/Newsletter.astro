@@ -1,0 +1,31 @@
+---
+const username = import.meta.env.PUBLIC_BUTTONDOWN_USERNAME?.trim();
+---
+
+<section class="newsletter" aria-labelledby="newsletter-title">
+  <div>
+    <p class="eyebrow">Email updates</p>
+    <h2 id="newsletter-title">{username ? 'Receive new writing by email.' : 'Follow new posts.'}</h2>
+    <p>Thoughts, projects, and interesting links. I aim to post weekly.</p>
+  </div>
+  {username ? (
+  <form
+    class="subscribe-form"
+    action={`https://buttondown.com/api/emails/embed-subscribe/${username}`}
+    method="post"
+    target="popupwindow"
+  >
+    <label for="bd-email">Email address</label>
+    <div class="form-row">
+      <input id="bd-email" name="email" type="email" autocomplete="email" required placeholder="you@example.com" />
+      <button class="button" type="submit">Subscribe</button>
+    </div>
+    <p class="form-note">You can also follow through <a href="/rss.xml">RSS</a>. Unsubscribe anytime.</p>
+  </form>
+  ) : (
+    <div>
+      <p>Email subscriptions aren't available yet. Follow through <a href="/rss.xml">RSS</a>.</p>
+      <p>To get in touch, <a href="mailto:nanda@thenandlabs.com">email me</a> or <a href="https://calendly.com/nanda-thenandlabs/30min">book a chat</a>.</p>
+    </div>
+  )}
+</section>
