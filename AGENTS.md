@@ -35,6 +35,10 @@ and potential employers. It should:
 
 ## Change Workflow
 
+For every blog draft or revision, follow
+`.agents/workflows/blog-writing.md` for Nanda's voice, brevity, and critical
+research review. Apply it before the pre-publish content review.
+
 Before editing:
 
 1. Inspect the current repository state and preserve unrelated user changes.
@@ -129,4 +133,3 @@ engine. Test at 200% zoom and with reduced motion enabled.
   social previews after deployment.
 - If post-deploy verification fails, stop promotion and restore the last known
   good version or correct the defect before announcing the release.
-

@@ -1,5 +1,9 @@
 # Site Validation Workflows
 
+For blog drafting and revision, first use `blog-writing.md`. It preserves
+Nanda's voice, requires the shortest clear post below 500 words, and defines
+the critical research pass. It does not replace the publication gates below.
+
 These workflows define the required evidence before publishing the NandLabs
 site. Run them against the production build in the listed order:
 
@@ -22,4 +26,3 @@ severity, and disposition.
 
 Do not use conditional approval. A candidate is publishable only when all four
 workflows pass for the same production artifact.
-
