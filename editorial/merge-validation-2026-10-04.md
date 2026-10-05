@@ -49,13 +49,13 @@
 - Redirect result: inherited Jekyll URLs need mapping, including `aboutus.html`, `stepmatch/`, `yapper/`, and `yapper/privacy.html`.
 - Performance result: no new scripts/embeds; full measurements outstanding.
 - Security/privacy result: no tracking added. GitHub Pages API reports legacy branch-source hosting and HTTPS enforcement disabled.
-- Findings: production default branch is `master`, not `main`; deployment workflow targets `master`; GitHub Pages remains configured for legacy source publishing rather than the Astro Actions artifact.
+- Findings: user confirmed `master` as the merge target; deployment workflow targets `master`; GitHub Pages remains configured for legacy source publishing rather than the Astro Actions artifact.
 
 ## Finding Ledger
 
 | Severity | Surface/URL | Finding | Reproduction | Disposition | Verification |
 | --- | --- | --- | --- | --- | --- |
-| Blocking | Target branch | User requested main; repository has only master | GitHub refs/default-branch check | Await target clarification | Question pending |
+| Resolved | Target branch | Repository default is master | GitHub refs/default-branch check | User confirmed master | October 4 reply |
 | Blocking | Hosting | Legacy branch-source Pages configuration does not match Astro Actions delivery | GitHub Pages API | Verify/configure intended hosting before production merge | Unresolved |
 | Blocking | Newsletter | Live Buttondown account and subscription behavior unverified | Prior validation report; current form | Validate service and opt-in flow | Unresolved |
 | Blocking | Legacy URLs | Durable routes have no completed redirect inventory | Compare origin/master tree with dist | Implement and verify URL preservation | Unresolved |
@@ -76,7 +76,7 @@
 - Candidate unchanged since validation: production source unchanged after build/tests.
 - Rollback available: existing origin/master and Jekyll checkpoint preserved.
 - Decision: `blocked` for production merge.
-- Decision rationale: branch choice pending and merging the rebuild into the production branch would cross unresolved release gates.
+- Decision rationale: user confirmed master; merging the rebuild into the production branch would cross unresolved release gates.
 
 ## Post-Deploy Verification
 
