@@ -1,5 +1,13 @@
 # Site Validation Report
 
+## Preview Content Removal
+
+- Removed the three starter posts at the owner's request: What I want NandLabs to be, Architecture is an organizational instrument, and Publishing as a durable system.
+- Updated representative browser journeys to omit the deleted route.
+- Type/content checks and production build passed. Inspection of every production file confirmed the removed slugs are absent, including listings, RSS and sitemap.
+- Current artifact SHA-256 (sorted paths and file bytes): `18a726093877909f0a72dc87cc754ddbd42b9494d603f029b0598e1c58b55d48`.
+- The local preview now contains only Hello and Memorii as public posts. Deployment blockers recorded below remain unchanged. The following report describes the preceding preview artifact.
+
 - Candidate revision: production preview prepared on `codex/site-rebuild`, parent `b19f172`; pending commit of this report and the tested changes.
 - Production artifact: `dist/`, SHA-256 `c89d2c8d341af346f21f1b3f4a78b6f70f10bcde214bca135a50d4af54ce9cb0`
 - Canonical domain: `https://thenandlabs.com`
