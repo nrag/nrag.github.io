@@ -17,6 +17,12 @@ not better if it changes the mechanism or hides an important limitation.
 
 ## Draft
 
+- Store unpublished prose and its editorial queue outside public branches. A
+  public Git branch is not private, and `draft: true` only excludes site output.
+  For this checkout, `codex/editorial-drafts` is a local-only branch; do not push
+  it. Copy only the approved post into a release branch when publishing.
+  Previously committed copies remain in public history until a separately
+  authorized history cleanup; never describe source deletion as erasure.
 - Start with enough concrete context that the opening makes sense. For a
   project story, establish the experience and problem before introducing it.
 - Use a short, descriptive title. Keep the description concise too.
