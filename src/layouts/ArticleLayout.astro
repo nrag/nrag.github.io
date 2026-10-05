@@ -4,13 +4,14 @@ import BaseLayout from './BaseLayout.astro';
 interface Props {
   title: string;
   description: string;
+  showSubtitle?: boolean;
   publishedAt: Date;
   updatedAt?: Date;
   kind: string;
   topics: string[];
 }
 
-const { title, description, publishedAt, updatedAt, kind, topics } = Astro.props;
+const { title, description, showSubtitle = true, publishedAt, updatedAt, kind, topics } = Astro.props;
 ---
 
 <BaseLayout title={`${title} — NandLabs`} description={description} image={null} article>
@@ -24,7 +25,7 @@ const { title, description, publishedAt, updatedAt, kind, topics } = Astro.props
         </time>
       </div>
       <h1>{title}</h1>
-      <p class="article-dek">{description}</p>
+      {showSubtitle && <p class="article-dek">{description}</p>}
       <p class="article-byline">
         By Nanda Raghunathan
         {updatedAt && <> · Updated <time datetime={updatedAt.toISOString()}>{updatedAt.toLocaleDateString('en-US', { timeZone: 'UTC' })}</time></>}

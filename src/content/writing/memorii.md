@@ -1,6 +1,7 @@
 ---
 title: "Memorii - a memory system for agents"
 description: "Repeatedly forgotten facts led me to build Memorii, starting with evidence, changing memories, and unfinished work."
+showSubtitle: false
 publishedAt: 2026-10-04
 kind: note
 minutes: 2
