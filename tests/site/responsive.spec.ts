@@ -18,7 +18,7 @@ for (const width of widths) {
 }
 
 test('primary internal journeys resolve', async ({ page }) => {
-  for (const path of ['/', '/writing', '/essays', '/notes', '/links', '/ideas', '/writing/what-nandlabs-is-for', '/work', '/about', '/subscribe', '/rss.xml']) {
+  for (const path of ['/', '/writing', '/essays', '/notes', '/links', '/ideas', '/writing/what-nandlabs-is-for', '/writing/hello', '/writing/memorii', '/work', '/about', '/subscribe', '/rss.xml']) {
     const response = await page.goto(path);
     expect(response?.ok(), `${path} should return a successful response`).toBeTruthy();
   }

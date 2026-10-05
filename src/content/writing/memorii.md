@@ -6,7 +6,7 @@ kind: note
 minutes: 2
 topics: [projects, memorii]
 featured: false
-draft: true
+draft: false
 ---
 
 I've been playing around with OpenClaw and Hermes since they were released. By May, I was frustrated: they kept forgetting basic facts and rules I'd repeated many times. I thought they needed a better memory system.

@@ -6,7 +6,7 @@ kind: note
 minutes: 1
 topics: [personal, writing]
 featured: false
-draft: true
+draft: false
 ---
 
 I'm Nanda R, a software engineer with over 20 years of experience in the industry and almost all of them at Microsoft.

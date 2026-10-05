@@ -1,13 +1,13 @@
 # Post queue
 
-Prepared October 4, 2026. All 15 new entries use `draft: true`; nothing is scheduled for automatic publication. The `publishedAt` values are drafting dates required by the current schema, not approved release dates. Set the actual date when publishing.
+Prepared October 4, 2026. The intro and Memorii are marked `draft: false` for the production preview at Nanda's request. The 13 link-post entries remain `draft: true`; nothing is scheduled for automatic publication. The `publishedAt` values are drafting dates required by the current schema, not approved release dates. Set the actual date when publishing.
 
 The source plan has 13 link-post groups, plus the requested introduction and Memorii post. Keep Acemoglu's four questions together as the supplied grouping specifies. Existing public posts and URLs remain unchanged.
 
 ## Opening posts
 
-1. [Hello, I am Nanda](../src/content/writing/hello.md): first-post draft for review.
-2. [Memorii](../src/content/writing/memorii.md): revised with Nanda's May origin story, research comparison, four stages, and reported first-release status. Await voice review and the pre-publish gate. OpenClaw/Pi compatibility and first-release readiness are user-supplied claims that differ from the inspected public README; reconcile the release revision before publication. Component improvements are user-reported, with no numerical or agent-level gains claimed.
+1. [Hello, I am Nanda](../src/content/writing/hello.md): first post marked for publication and rendered in the production preview.
+2. [Memorii](../src/content/writing/memorii.md): revised with Nanda's May origin story, research comparison, four stages, and reported first-release status. Marked for publication at the owner's request; production preview and the pre-publish gate remain to verify. OpenClaw/Pi compatibility and first-release readiness are user-supplied claims that differ from the inspected public README; reconcile the release revision before publication. Component improvements are user-reported, with no numerical or agent-level gains claimed.
 
 ## Recommended next weekly post
 
