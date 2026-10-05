@@ -2,6 +2,13 @@
 
 Reviewed October 4, 2026. These are editorial notes, not public post content.
 
+## Latest owner-directed revision
+
+- Replaced the research comparison with the owner's account of reviewing roughly 25 papers and choosing ontology, execution-state history, and a solver graph. These are the owner's design takeaways, not a claim that every cited paper tests all three features.
+- Added all 28 supplied references, grouped by subject with shortened labels. Checked the supplied arXiv pages for title/link correspondence and removed tracking parameters. Found the missing Memora URL through the authors' repository: https://arxiv.org/abs/2604.20006.
+- Owner now reports step 1 complete, all three host integrations working, and long-running agent-task benchmarks being designed and run. This supersedes earlier owner-status wording; it does not establish completed end-to-end gains or make the previously inspected accumulation design a completed benchmark.
+- Post is marked for publication in the local preview. Production deployment remains subject to the existing release gates. Earlier notes below are historical evidence, not the latest copy.
+
 ## Research comparison
 
 The post selects examples from the last five years; it does not claim to exhaust the literature or establish Memorii's novelty.

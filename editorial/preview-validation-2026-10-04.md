@@ -1,5 +1,11 @@
 # Site Validation Report
 
+## Latest Memorii Copy Revision
+
+- Applied the owner's revised research account, four-stage plan, step-1 completion status, and benchmark-progress wording. Added the 28 owner-supplied references with clean URLs; resolved the missing Memora link from its authors' repository.
+- The article subtitle remains hidden. Body is 339 words including reference labels/headings. Content validation and production build passed; the local preview serves this rebuilt copy.
+- No production deployment or fresh full browser gate claimed. Earlier artifact hashes and browser results below describe preceding revisions; existing deployment blockers remain open.
+
 ## Preview Content Removal
 
 - Removed the three starter posts at the owner's request: What I want NandLabs to be, Architecture is an organizational instrument, and Publishing as a durable system.
