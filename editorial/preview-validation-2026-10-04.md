@@ -6,6 +6,7 @@
 - Updated representative browser journeys to omit the deleted route.
 - Type/content checks and production build passed. Inspection of every production file confirmed the removed slugs are absent, including listings, RSS and sitemap.
 - Current artifact SHA-256 (sorted paths and file bytes): `18a726093877909f0a72dc87cc754ddbd42b9494d603f029b0598e1c58b55d48`.
+- Additional browser run: Chromium checks passed; multiple concurrent WebKit accessibility checks timed out at 35 seconds. Run interrupted after those failures; this run does not establish a passing browser gate for the updated artifact.
 - The local preview now contains only Hello and Memorii as public posts. Deployment blockers recorded below remain unchanged. The following report describes the preceding preview artifact.
 
 - Candidate revision: production preview prepared on `codex/site-rebuild`, parent `b19f172`; pending commit of this report and the tested changes.
