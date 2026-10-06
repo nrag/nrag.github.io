@@ -1,19 +1,20 @@
 ---
 const username = import.meta.env.PUBLIC_BUTTONDOWN_USERNAME?.trim();
+interface Props { standalone?: boolean; }
+const { standalone = false } = Astro.props;
+const Heading = standalone ? 'h1' : 'h2';
 ---
 
 <section class="newsletter" aria-labelledby="newsletter-title">
   <div>
-    <p class="eyebrow">Email updates</p>
-    <h2 id="newsletter-title">{username ? 'Receive new writing by email.' : 'Follow new posts.'}</h2>
-    <p>Thoughts, projects, and interesting links. I aim to post weekly.</p>
+    <Heading id="newsletter-title">Subscribe</Heading>
+    <p>New posts by email. About once a week.</p>
   </div>
   {username ? (
   <form
     class="subscribe-form"
     action={`https://buttondown.com/api/emails/embed-subscribe/${username}`}
     method="post"
-    target="popupwindow"
   >
     <label for="bd-email">Email address</label>
     <div class="form-row">
@@ -21,11 +22,11 @@ const username = import.meta.env.PUBLIC_BUTTONDOWN_USERNAME?.trim();
       <button class="button" type="submit">Subscribe</button>
     </div>
     <p class="form-note">You can also follow through <a href="/rss.xml">RSS</a>. Unsubscribe anytime.</p>
+    <p class="form-note"><a href={`https://buttondown.com/refer/${username}`}>Powered by Buttondown</a></p>
   </form>
   ) : (
     <div>
-      <p>Email subscriptions aren't available yet. Follow through <a href="/rss.xml">RSS</a>.</p>
-      <p>To get in touch, <a href="mailto:nanda@thenandlabs.com">email me</a> or <a href="https://calendly.com/nanda-thenandlabs/30min">book a chat</a>.</p>
+      <p>Email signup is coming soon. <a href="/rss.xml">Follow via RSS</a> for now.</p>
     </div>
   )}
 </section>

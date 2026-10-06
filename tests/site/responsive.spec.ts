@@ -2,6 +2,21 @@ import { expect, test } from '@playwright/test';
 
 const widths = [320, 375, 768, 1024, 1440];
 
+test('project descriptions remain readable at every supported width', async ({ page }) => {
+  for (const width of widths) {
+    await page.setViewportSize({ width, height: 900 });
+    await page.goto('/work');
+    for (const name of ['Memorii', 'VirtualEmployee', 'Yapper']) {
+      await expect(page.getByRole('heading', { name, exact: true })).toBeVisible();
+    }
+    await expect(page.getByRole('heading', { name: 'StepMatch' })).toHaveCount(0);
+    const textWidth = await page.locator('#virtualemployee p').evaluate((node) => node.getBoundingClientRect().width);
+    expect(textWidth).toBeGreaterThan(180);
+    const overflow = await page.evaluate(() => document.documentElement.scrollWidth - document.documentElement.clientWidth);
+    expect(overflow).toBeLessThanOrEqual(1);
+  }
+});
+
 for (const width of widths) {
   test(`home is usable at ${width}px`, async ({ page }) => {
     await page.setViewportSize({ width, height: 900 });
