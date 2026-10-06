@@ -2,47 +2,22 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 ---
 
-<BaseLayout title="Projects and practice — NandLabs" description="The systems, organizations, products, and experiments Nanda Raghunathan explores through NandLabs.">
-  <header class="page-header shell">
-    <p class="eyebrow">Projects and practice</p>
-    <h1>Questions worth working on.</h1>
-    <p>After more than two decades in the tech industry, I’m less interested in displaying a chronology than in examining the ideas that remain useful.</p>
-    <a class="text-link" href="https://www.linkedin.com/in/nandaraghunathan">See LinkedIn for my latest role and employment history <span aria-hidden="true">↗</span></a>
-  </header>
-
-  <section class="section shell case-study" aria-labelledby="practice-title">
-    <div class="case-kicker"><span>Ongoing practice</span><span>Systems and organizations</span></div>
-    <div class="case-grid">
-      <div>
-        <h2 id="practice-title">The work beneath the work.</h2>
-        <p class="case-lede">The recurring problems are rarely confined to code. They sit between architecture, ownership, customer trust, and the way decisions get made.</p>
-      </div>
-      <div class="case-body">
-        <h3>Dependable systems</h3>
-        <p>How do we make complex systems observable, operable, and understandable—not only when they work, but when assumptions begin to fail?</p>
-        <h3>Engineering organizations</h3>
-        <p>How should technical boundaries and team boundaries reinforce each other? Where does coordination create safety, and where does it merely create waiting?</p>
-        <h3>Product judgment</h3>
-        <p>How do we connect deep technical choices to a customer problem without simplifying either side of the conversation?</p>
-      </div>
-    </div>
-  </section>
-
-  <section class="section shell timeline" aria-labelledby="themes-title">
-    <div class="section-heading"><div><p class="eyebrow">Themes</p><h2 id="themes-title">What I keep returning to.</h2></div></div>
-    <article><span>01 / Systems</span><h3>Reliability creates room for ambition</h3><p>Strong foundations are not a tax on innovation. They are what let teams make consequential changes without relying on hope as an operating model.</p></article>
-    <article><span>02 / Teams</span><h3>Architecture distributes decisions</h3><p>Every boundary shapes who can act independently, where coordination happens, and how quickly an organization can learn.</p></article>
-    <article><span>03 / Products</span><h3>Small experiments expose assumptions</h3><p>Building something modest and putting it in front of people is often the shortest route from an attractive theory to useful evidence.</p></article>
-  </section>
-
+<BaseLayout title="Projects - NandLabs" description="Projects I'm working on: Memorii, VirtualEmployee, and Yapper.">
+  <header class="page-header shell"><h1>Projects</h1></header>
   <section class="section shell project-pair" aria-label="NandLabs projects">
-    <article class="project-card">
-      <img src="/images/yapper.png" width="96" height="96" alt="Yapper app icon" />
-      <div><p class="eyebrow">Product experiment</p><h2>Yapper</h2><p>An encrypted messaging experiment combining conversation with practical coordination features. Created jointly with Kamal.</p></div>
+    <article class="project-card project-card-text" id="memorii">
+      <div>
+        <h2>Memorii</h2>
+        <p>A memory system for agents. It tracks ontology, execution state, and a solver graph.</p>
+        <p><a href="/writing/memorii">Read about Memorii</a> / <a href="https://github.com/nrag/Memorii">GitHub</a></p>
+      </div>
     </article>
-    <article class="project-card">
-      <img src="/images/stepmatch.png" width="96" height="96" alt="StepMatch app icon" />
-      <div><p class="eyebrow">Product experiment</p><h2>StepMatch</h2><p>A social activity experiment designed around friendly challenges and mutual motivation.</p></div>
+    <article class="project-card project-card-text" id="virtualemployee">
+      <div><h2>VirtualEmployee</h2><p>A virtual employee that works with your team in Slack.</p></div>
+    </article>
+    <article class="project-card" id="yapper">
+      <img src="/images/yapper.png" width="96" height="96" alt="Yapper app icon" />
+      <div><h2>Yapper</h2><p>An encrypted messaging app I built with Kamal.</p></div>
     </article>
   </section>
 </BaseLayout>

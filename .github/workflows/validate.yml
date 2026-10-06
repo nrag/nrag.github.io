@@ -7,6 +7,8 @@ on:
 
 jobs:
   validate:
+    env:
+      PUBLIC_BUTTONDOWN_USERNAME: ${{ vars.PUBLIC_BUTTONDOWN_USERNAME }}
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4

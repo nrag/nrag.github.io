@@ -45,3 +45,5 @@ Before publishing, complete the workflows in `.agents/workflows/` and record the
 ## Newsletter
 
 The subscription form uses Buttondown only when `PUBLIC_BUTTONDOWN_USERNAME` is explicitly configured. Copy `.env.example` to `.env` and set it to a verified live publication name, then confirm the signup and double-opt-in flow. Without that setting, the page offers RSS and contact links instead of a signup form. RSS is always available at `/rss.xml`.
+
+For GitHub Pages, set the repository Actions variable `PUBLIC_BUTTONDOWN_USERNAME` to the same verified publication username. Both validation and deployment builds use this variable. Confirm the provider's sender verification and a real double-opt-in signup before enabling it publicly.

@@ -16,6 +16,8 @@ concurrency:
 
 jobs:
   validate-and-deploy:
+    env:
+      PUBLIC_BUTTONDOWN_USERNAME: ${{ vars.PUBLIC_BUTTONDOWN_USERNAME }}
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}

@@ -689,6 +689,10 @@ h3 {
   font-size: 2rem;
 }
 
+.project-card.project-card-text {
+  grid-template-columns: 1fr;
+}
+
 .about-hero {
   display: grid;
   grid-template-columns: minmax(260px, 0.6fr) 1.4fr;
