@@ -18,7 +18,7 @@
 
 - Memorii description is drawn from the owner-approved published post.
 - VirtualEmployee description reflects the owner's clarification: a virtual employee, not merely a product-management copilot. Slack integration is documented in its README. No private repository link or implementation detail is published.
-- Yapper retains attribution to Kamal.
+- Yapper now uses the owner's supplied 2012 origin story, features, Windows Phone platform limitation, unbuilt extensibility plan, and enterprise-product hindsight, with the supplied GitHub link. This supersedes the earlier short description.
 - About reuses owner-approved biographical and contact statements.
 
 ## Experience Review
