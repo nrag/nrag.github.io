@@ -4,7 +4,7 @@
 - Production artifact: local `dist/`; preview at `http://127.0.0.1:4323`.
 - Canonical domain: `https://thenandlabs.com`.
 - Build command: `npm run build`.
-- Decision: ready for owner preview; email integration blocked on account setup.
+- Decision: ready for owner preview; email form connected, real confirmation-flow verification outstanding.
 
 ## Changed Scope
 
@@ -32,12 +32,13 @@
 
 - Type/content check: zero diagnostics; content checks passed.
 - Production builds passed.
-- Email form is prepared but cannot receive subscribers without a live provider publication. Owner confirmed no account exists yet. RSS remains available.
+- Owner subsequently supplied the Buttondown embed for `nrag`. Public publication returned HTTP 200. Configured the repository Actions variable and rebuilt the preview with that username. Form posts to the supplied endpoint, includes required email validation and provider attribution. RSS remains available.
+- Enabled-form accessibility passed in Chromium and WebKit. A locally intercepted POST verified payload and target; invalid email blocked submission. No request reached Buttondown during this check.
 - No signup, email send, or paid purchase performed.
 - Preview only; no production deployment in this change.
 
 ## Publish Decision
 
 - Work and About ready for owner review.
-- Email subscription integration remains blocked on a Buttondown publication username, sender verification, and owner-selected test address for confirmation-flow verification.
+- Live sender verification, double-opt-in email delivery, duplicate handling, and unsubscribe remain unverified; these require owner review or an authorized real test signup. Do not describe the local interception as end-to-end verification.
 - Existing production remains unchanged until the PR is merged.
