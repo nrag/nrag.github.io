@@ -5,4 +5,7 @@ export default defineConfig({
   site: 'https://thenandlabs.com',
   integrations: [sitemap()],
   trailingSlash: 'never',
+  redirects: {
+    '/writing/hello': '/about',
+  },
 });

@@ -1,0 +1,528 @@
+{
+  "matrix": [
+    {
+      "browser": "chromium",
+      "path": "/",
+      "width": 320,
+      "overflow": 0
+    },
+    {
+      "browser": "chromium",
+      "path": "/writing",
+      "width": 320,
+      "overflow": 0
+    },
+    {
+      "browser": "chromium",
+      "path": "/writing/links-october-4-17",
+      "width": 320,
+      "overflow": 0
+    },
+    {
+      "browser": "chromium",
+      "path": "/writing/memorii",
+      "width": 320,
+      "overflow": 0
+    },
+    {
+      "browser": "chromium",
+      "path": "/work",
+      "width": 320,
+      "overflow": 0
+    },
+    {
+      "browser": "chromium",
+      "path": "/about",
+      "width": 320,
+      "overflow": 0
+    },
+    {
+      "browser": "chromium",
+      "path": "/subscribe",
+      "width": 320,
+      "overflow": 0
+    },
+    {
+      "browser": "chromium",
+      "path": "/404",
+      "width": 320,
+      "overflow": 0
+    },
+    {
+      "browser": "chromium",
+      "path": "/",
+      "width": 375,
+      "overflow": 0
+    },
+    {
+      "browser": "chromium",
+      "path": "/writing",
+      "width": 375,
+      "overflow": 0
+    },
+    {
+      "browser": "chromium",
+      "path": "/writing/links-october-4-17",
+      "width": 375,
+      "overflow": 0
+    },
+    {
+      "browser": "chromium",
+      "path": "/writing/memorii",
+      "width": 375,
+      "overflow": 0
+    },
+    {
+      "browser": "chromium",
+      "path": "/work",
+      "width": 375,
+      "overflow": 0
+    },
+    {
+      "browser": "chromium",
+      "path": "/about",
+      "width": 375,
+      "overflow": 0
+    },
+    {
+      "browser": "chromium",
+      "path": "/subscribe",
+      "width": 375,
+      "overflow": 0
+    },
+    {
+      "browser": "chromium",
+      "path": "/404",
+      "width": 375,
+      "overflow": 0
+    },
+    {
+      "browser": "chromium",
+      "path": "/",
+      "width": 768,
+      "overflow": 0
+    },
+    {
+      "browser": "chromium",
+      "path": "/writing",
+      "width": 768,
+      "overflow": 0
+    },
+    {
+      "browser": "chromium",
+      "path": "/writing/links-october-4-17",
+      "width": 768,
+      "overflow": 0
+    },
+    {
+      "browser": "chromium",
+      "path": "/writing/memorii",
+      "width": 768,
+      "overflow": 0
+    },
+    {
+      "browser": "chromium",
+      "path": "/work",
+      "width": 768,
+      "overflow": 0
+    },
+    {
+      "browser": "chromium",
+      "path": "/about",
+      "width": 768,
+      "overflow": 0
+    },
+    {
+      "browser": "chromium",
+      "path": "/subscribe",
+      "width": 768,
+      "overflow": 0
+    },
+    {
+      "browser": "chromium",
+      "path": "/404",
+      "width": 768,
+      "overflow": 0
+    },
+    {
+      "browser": "chromium",
+      "path": "/",
+      "width": 1024,
+      "overflow": 0
+    },
+    {
+      "browser": "chromium",
+      "path": "/writing",
+      "width": 1024,
+      "overflow": 0
+    },
+    {
+      "browser": "chromium",
+      "path": "/writing/links-october-4-17",
+      "width": 1024,
+      "overflow": 0
+    },
+    {
+      "browser": "chromium",
+      "path": "/writing/memorii",
+      "width": 1024,
+      "overflow": 0
+    },
+    {
+      "browser": "chromium",
+      "path": "/work",
+      "width": 1024,
+      "overflow": 0
+    },
+    {
+      "browser": "chromium",
+      "path": "/about",
+      "width": 1024,
+      "overflow": 0
+    },
+    {
+      "browser": "chromium",
+      "path": "/subscribe",
+      "width": 1024,
+      "overflow": 0
+    },
+    {
+      "browser": "chromium",
+      "path": "/404",
+      "width": 1024,
+      "overflow": 0
+    },
+    {
+      "browser": "chromium",
+      "path": "/",
+      "width": 1440,
+      "overflow": 0
+    },
+    {
+      "browser": "chromium",
+      "path": "/writing",
+      "width": 1440,
+      "overflow": 0
+    },
+    {
+      "browser": "chromium",
+      "path": "/writing/links-october-4-17",
+      "width": 1440,
+      "overflow": 0
+    },
+    {
+      "browser": "chromium",
+      "path": "/writing/memorii",
+      "width": 1440,
+      "overflow": 0
+    },
+    {
+      "browser": "chromium",
+      "path": "/work",
+      "width": 1440,
+      "overflow": 0
+    },
+    {
+      "browser": "chromium",
+      "path": "/about",
+      "width": 1440,
+      "overflow": 0
+    },
+    {
+      "browser": "chromium",
+      "path": "/subscribe",
+      "width": 1440,
+      "overflow": 0
+    },
+    {
+      "browser": "chromium",
+      "path": "/404",
+      "width": 1440,
+      "overflow": 0
+    },
+    {
+      "browser": "webkit",
+      "path": "/",
+      "width": 320,
+      "overflow": 0
+    },
+    {
+      "browser": "webkit",
+      "path": "/writing",
+      "width": 320,
+      "overflow": 0
+    },
+    {
+      "browser": "webkit",
+      "path": "/writing/links-october-4-17",
+      "width": 320,
+      "overflow": 0
+    },
+    {
+      "browser": "webkit",
+      "path": "/writing/memorii",
+      "width": 320,
+      "overflow": 0
+    },
+    {
+      "browser": "webkit",
+      "path": "/work",
+      "width": 320,
+      "overflow": 0
+    },
+    {
+      "browser": "webkit",
+      "path": "/about",
+      "width": 320,
+      "overflow": 0
+    },
+    {
+      "browser": "webkit",
+      "path": "/subscribe",
+      "width": 320,
+      "overflow": 0
+    },
+    {
+      "browser": "webkit",
+      "path": "/404",
+      "width": 320,
+      "overflow": 0
+    },
+    {
+      "browser": "webkit",
+      "path": "/",
+      "width": 375,
+      "overflow": 0
+    },
+    {
+      "browser": "webkit",
+      "path": "/writing",
+      "width": 375,
+      "overflow": 0
+    },
+    {
+      "browser": "webkit",
+      "path": "/writing/links-october-4-17",
+      "width": 375,
+      "overflow": 0
+    },
+    {
+      "browser": "webkit",
+      "path": "/writing/memorii",
+      "width": 375,
+      "overflow": 0
+    },
+    {
+      "browser": "webkit",
+      "path": "/work",
+      "width": 375,
+      "overflow": 0
+    },
+    {
+      "browser": "webkit",
+      "path": "/about",
+      "width": 375,
+      "overflow": 0
+    },
+    {
+      "browser": "webkit",
+      "path": "/subscribe",
+      "width": 375,
+      "overflow": 0
+    },
+    {
+      "browser": "webkit",
+      "path": "/404",
+      "width": 375,
+      "overflow": 0
+    },
+    {
+      "browser": "webkit",
+      "path": "/",
+      "width": 768,
+      "overflow": 0
+    },
+    {
+      "browser": "webkit",
+      "path": "/writing",
+      "width": 768,
+      "overflow": 0
+    },
+    {
+      "browser": "webkit",
+      "path": "/writing/links-october-4-17",
+      "width": 768,
+      "overflow": 0
+    },
+    {
+      "browser": "webkit",
+      "path": "/writing/memorii",
+      "width": 768,
+      "overflow": 0
+    },
+    {
+      "browser": "webkit",
+      "path": "/work",
+      "width": 768,
+      "overflow": 0
+    },
+    {
+      "browser": "webkit",
+      "path": "/about",
+      "width": 768,
+      "overflow": 0
+    },
+    {
+      "browser": "webkit",
+      "path": "/subscribe",
+      "width": 768,
+      "overflow": 0
+    },
+    {
+      "browser": "webkit",
+      "path": "/404",
+      "width": 768,
+      "overflow": 0
+    },
+    {
+      "browser": "webkit",
+      "path": "/",
+      "width": 1024,
+      "overflow": 0
+    },
+    {
+      "browser": "webkit",
+      "path": "/writing",
+      "width": 1024,
+      "overflow": 0
+    },
+    {
+      "browser": "webkit",
+      "path": "/writing/links-october-4-17",
+      "width": 1024,
+      "overflow": 0
+    },
+    {
+      "browser": "webkit",
+      "path": "/writing/memorii",
+      "width": 1024,
+      "overflow": 0
+    },
+    {
+      "browser": "webkit",
+      "path": "/work",
+      "width": 1024,
+      "overflow": 0
+    },
+    {
+      "browser": "webkit",
+      "path": "/about",
+      "width": 1024,
+      "overflow": 0
+    },
+    {
+      "browser": "webkit",
+      "path": "/subscribe",
+      "width": 1024,
+      "overflow": 0
+    },
+    {
+      "browser": "webkit",
+      "path": "/404",
+      "width": 1024,
+      "overflow": 0
+    },
+    {
+      "browser": "webkit",
+      "path": "/",
+      "width": 1440,
+      "overflow": 0
+    },
+    {
+      "browser": "webkit",
+      "path": "/writing",
+      "width": 1440,
+      "overflow": 0
+    },
+    {
+      "browser": "webkit",
+      "path": "/writing/links-october-4-17",
+      "width": 1440,
+      "overflow": 0
+    },
+    {
+      "browser": "webkit",
+      "path": "/writing/memorii",
+      "width": 1440,
+      "overflow": 0
+    },
+    {
+      "browser": "webkit",
+      "path": "/work",
+      "width": 1440,
+      "overflow": 0
+    },
+    {
+      "browser": "webkit",
+      "path": "/about",
+      "width": 1440,
+      "overflow": 0
+    },
+    {
+      "browser": "webkit",
+      "path": "/subscribe",
+      "width": 1440,
+      "overflow": 0
+    },
+    {
+      "browser": "webkit",
+      "path": "/404",
+      "width": 1440,
+      "overflow": 0
+    }
+  ],
+  "performance": [
+    {
+      "width": 375,
+      "path": "/",
+      "lcp": 172,
+      "cls": 0,
+      "transferBytes": 14767
+    },
+    {
+      "width": 375,
+      "path": "/writing/links-october-4-17",
+      "lcp": 136,
+      "cls": 0,
+      "transferBytes": 14767
+    },
+    {
+      "width": 1440,
+      "path": "/",
+      "lcp": 168,
+      "cls": 0,
+      "transferBytes": 14767
+    },
+    {
+      "width": 1440,
+      "path": "/writing/links-october-4-17",
+      "lcp": 140,
+      "cls": 0,
+      "transferBytes": 14767
+    }
+  ],
+  "subscription": [
+    {
+      "browser": "chromium",
+      "invalidEmailRejected": true,
+      "action": "https://buttondown.com/api/emails/embed-subscribe/nrag",
+      "noSubmission": true
+    },
+    {
+      "browser": "webkit",
+      "invalidEmailRejected": true,
+      "action": "https://buttondown.com/api/emails/embed-subscribe/nrag",
+      "noSubmission": true
+    }
+  ]
+}
