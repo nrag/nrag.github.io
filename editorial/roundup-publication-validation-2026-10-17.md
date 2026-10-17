@@ -60,6 +60,11 @@ No layouts, styles, subscription code, dependencies, or assets changed.
 | Draft isolation | The original checkout is behind production and contains unpublished drafts and unrelated edits. | Resolved: release starts at current master and copies only approved changes. | Scoped diff and collection/output scan. |
 | Dependency audit | Existing lockfile reports seven vulnerable build dependencies. | Non-blocking for this static content release: no dependency changes, no server runtime or browser JavaScript from these packages deployed, trusted source inputs only. Track toolchain maintenance separately. | Static build/output inspection. |
 
+CI initially reached WebKit's 32,767-pixel screenshot limit for the long 320px
+post at device resolution. Captures now use CSS-pixel resolution while
+retaining full-page content and all layout assertions. Remote CI must pass
+on this correction before merge. No public artifact content changed.
+
 ## Known Limitations
 
 | Limitation | Reader impact | Rationale / follow-up |

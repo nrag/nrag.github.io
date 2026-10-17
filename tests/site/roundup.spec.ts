@@ -25,7 +25,7 @@ for (const width of [320, 375, 768, 1024, 1440]) {
     }).map(node => node.textContent));
     expect(clipped).toEqual([]);
     expect(errors).toEqual([]);
-    await page.screenshot({ path: `test-results/roundup-${test.info().project.name}-${width}.png`, fullPage: true });
+    await page.screenshot({ path: `test-results/roundup-${test.info().project.name}-${width}.png`, fullPage: true, scale: 'css' });
   });
 }
 
